@@ -1,0 +1,18 @@
+Functionaliteis
+
+Quiz Diagonsotic.
+    - pending
+
+Volunteering
+    - allow people to register 
+    - get people info and store in db
+    - respond to people with available positions
+
+Make a donation
+    - why do people need to donate
+        - schoplarship to someone who has suffered or family has suffered
+        - make events to raise BC Awarnes
+
+News
+    -send a request to a news api and get two last news on BC
+
