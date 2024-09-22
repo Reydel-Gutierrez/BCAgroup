@@ -23,6 +23,60 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 -->
 
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      events: [
+    {
+        title: 'Annual Awareness Walk',
+        start: '2024-04-14',
+        description: 'Join us for our annual walk to raise awareness and funds for breast cancer research. Everyone is welcome!',
+        extendedProps: {
+            instructions: 'To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.'
+        }
+    },
+    {
+        title: 'Virtual Discussion Panel',
+        start: '2024-06-10',
+        description: 'Join us in a virtual panel with healthcare professionals and survivors to discuss the importance of early detection and share valuable information.',
+        extendedProps: {
+            instructions: 'To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.'
+        }
+    },
+    {
+        title: 'Social Media Challenge',
+        start: '2024-08-20',
+        description: 'Join us for a vibrant social media challenge! We invite everyone to share a photo featuring something pink, spreading awareness and support for breast cancer. Let\'s paint the online world pink together!',
+        extendedProps: {
+            instructions: 'To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.'
+        }
+    },
+    {
+        title: 'Pink Pickle Ball Day',
+        start: '2024-10-19',
+        description: 'Join us for a lively day of pickleball, where fun meets purpose! Wear your pink gear and help raise awareness for breast cancer while enjoying this exciting sport with friends and community.',
+        extendedProps: {
+            instructions: 'To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.'
+        }
+    }
+    ],
+      eventClick: function(info) {
+        // Create a prompt with the event details
+        const { title, extendedProps } = info.event;
+        const description = info.event.extendedProps.description;
+        const instructions = extendedProps.instructions;
+        
+        alert(`Event: ${title}\nDescription: ${description}\nInstructions: ${instructions}`);
+      }
+    });
+    calendar.render();
+  });
+
+</script>
     </head>
     
     <body id="section_1">
@@ -93,21 +147,11 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="resources.html">Resources</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="news.html">News Listing</a></li>
-
-                                <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
-                            </ul>
+                            <a class="nav-link " href="#section_5">Events</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Register</a>
+                            <a class="nav-link click-scroll" href="#section_6">Get In Contact</a>
                         </li>
 
 
@@ -186,17 +230,17 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="donate.html" class="d-block">
+                                <a href="jobs.html" class="d-block">
                                     <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
 
-                                    <p class="featured-block-text">Become a <strong>volunteer</strong></p>
+                                    <p class="featured-block-text">Volunteer <strong>With Us</strong></p>
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="donate.html" class="d-block">
+                                <a href="" class="d-block">
                                     <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text"><strong>Informative</strong> Researches</p>
@@ -217,7 +261,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="self.html" class="d-block">
-                                    <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
+                                    <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text"><strong>Breast</strong> Self-Exam</p>
                                 </a>
@@ -242,7 +286,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <h5 class="mb-3">B.C.A Group, Non-Profit Organization</h5>
 
-                                <p class="mb-0">Established in 2022, B.C.A Group is my response to the profound impact cancer has had on my life. Witnessing the struggles of my loved ones stirred a deep determination within me. Now, with more then 50 donations and counting, our charity stands as a source of hope for many.</p>
+                                <p class="mb-0">Established in 2023, B.C.A Group is my response to the profound impact cancer has had on my life. Witnessing the struggles of my loved ones stirred a deep determination within me. Now, with more then 50 donations and counting, our charity stands as a source of hope for many.</p>
                             </div>
                             
                             <div class="row">
@@ -270,7 +314,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
                                         <div class="counter-thumb"> 
                                             <div class="d-flex">
-                                                <span class="counter-number" data-from="1" data-to="2022" data-speed="1000"></span>
+                                                <span class="counter-number" data-from="1" data-to="2023" data-speed="1000"></span>
                                                 <span class="counter-number-text"></span>
                                             </div>
 
@@ -311,7 +355,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </style>
 
                         <div class="col-lg-6 col-md-5 col-12">
-                            <img src="images/donate3.png" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="Donate">
+                            <img src="images/lia1.JPG" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="Donate">
                         </div>
 
                         <div class="col-lg-5 col-md-7 col-12">
@@ -483,250 +527,71 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </div>
             </section>
 
+            <style>
+        .events-header {
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        .event-item {
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .event-date {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .event-description {
+            margin: 10px 0;
+        }
+        .attend-instructions {
+            font-style: italic;
+            color: #333;
+        }
+            </style>
+
             <section class="news-section section-padding" id="section_5">
                 <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 mb-5">
-                            <h2>Recent News and Resources.</h2>
-                            <p class="text-muted">The resources listed on this webpage serve to raise awareness and highlight the latest discoveries in breast cancer research. They do not constitute medical advice recommended by a healthcare provider.</p>
-                        </div>
-
-                        <div class="col-lg-7 col-12">
-                            <div class="news-block">
-                                <div class="news-block-top">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/medium-shot-volunteers-with-clothing-donations.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-
-                                    <div class="news-category-block">
-                                        <a href="#" class="category-block-link">
-                                            Lifestyle,
-                                        </a>
-
-                                        <a href="#" class="category-block-link">
-                                            Clothing Donation
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="news-block-info">
-                                    <div class="d-flex mt-2">
-                                        <div class="news-block-date">
-                                            <p>
-                                                <i class="bi-calendar4 custom-icon me-1"></i>
-                                                October 12, 2036
-                                            </p>
-                                        </div>
-
-                                        <div class="news-block-author mx-5">
-                                            <p>
-                                                <i class="bi-person custom-icon me-1"></i>
-                                                By Admin
-                                            </p>
-                                        </div>
-
-                                        <div class="news-block-comment">
-                                            <p>
-                                                <i class="bi-chat-left custom-icon me-1"></i>
-                                                32 Comments
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="news-block-title mb-2">
-                                        <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to urban area</a></h4>
-                                    </div>
-
-                                    <div class="news-block-body">
-                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional charity theme based on Bootstrap</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="news-block mt-3">
-                                <div class="news-block-top">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/medium-shot-people-collecting-foodstuff.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-
-                                    <div class="news-category-block">
-                                        <a href="#" class="category-block-link">
-                                            Food,
-                                        </a>
-
-                                        <a href="#" class="category-block-link">
-                                            Donation,
-                                        </a>
-
-                                        <a href="#" class="category-block-link">
-                                            Caring
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="news-block-info">
-                                    <div class="d-flex mt-2">
-                                        <div class="news-block-date">
-                                            <p>
-                                                <i class="bi-calendar4 custom-icon me-1"></i>
-                                                October 20, 2036
-                                            </p>
-                                        </div>
-
-                                        <div class="news-block-author mx-5">
-                                            <p>
-                                                <i class="bi-person custom-icon me-1"></i>
-                                                By Admin
-                                            </p>
-                                        </div>
-
-                                        <div class="news-block-comment">
-                                            <p>
-                                                <i class="bi-chat-left custom-icon me-1"></i>
-                                                35 Comments
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="news-block-title mb-2">
-                                        <h4><a href="news-detail.html" class="news-block-title-link">Food donation area</a></h4>
-                                    </div>
-
-                                    <div class="news-block-body">
-                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus elementum, tempor risus vel, condimentum orci</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12 mx-auto">
-                            <form class="custom-form search-form" action="#" method="get" role="form">
-                                <input name="search" type="search" class="form-control" id="search" placeholder="Search" aria-label="Search">
-
-                                <button type="submit" class="form-control">
-                                    <i class="bi-search"></i>
-                                </button>
-                            </form>
-
-                            <h5 class="mt-5 mb-3">Recent news</h5>
-
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/africa-humanitarian-aid-doctor.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a></h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 16, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/close-up-happy-people-working-together.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a></h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 24, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="category-block d-flex flex-column">
-                                <h5 class="mb-3">Categories</h5>
-
-                                <a href="#" class="category-block-link">
-                                    Drinking water
-                                    <span class="badge">20</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Food Donation
-                                    <span class="badge">30</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Children Education
-                                    <span class="badge">10</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Poverty Development
-                                    <span class="badge">15</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Clothing Donation
-                                    <span class="badge">20</span>
-                                </a>
-                            </div>
-
-                            <div class="tags-block">
-                                <h5 class="mb-3">Tags</h5>
-
-                                <a href="#" class="tags-block-link">
-                                    Donation
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Clothing
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Food
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Children
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Education
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Poverty
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Clean Water
-                                </a>
-                            </div>
-
-                            <form class="custom-form subscribe-form" action="#" method="get" role="form">
-                                <h5 class="mb-4">Newsletter Form</h5>
-
-                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required>
-
-                                <div class="col-lg-12 col-12">
-                                    <button type="submit" class="form-control">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-
+                    <h1 class="events-header">Upcoming Events</h1>
+                    <div class="event-item">
+                        <div class="event-title">Annual Awareness Walk</div>
+                        <p class="event-date">Date: April 14, 2024</p>
+                        <p class="event-description">Join us for our annual walk to raise awareness and funds for breast cancer research. Everyone is welcome!</p>
+                        <p class="attend-instructions">To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.</p>                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Virtual Discussion Panel</div>
+                        <p class="event-date">Date: June 10, 2024</p>
+                        <p class="event-description">Join us in a virtual panel with healthcare professionals and survisors, to discuss the importnat of early detection and share valuable information.</p>
+                        <p class="attend-instructions">To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.</p>                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Social Media Challenge</div>
+                        <p class="event-date">Date: August 20, 2024</p>
+                        <p class="event-description">Join us for a vibrant social media challenge! We invite everyone to share a photo featuring something pink, spreading awareness and support for breast cancer. Let's paint the online world pink together!</p>
+                        <p class="attend-instructions">To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.</p>                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Pink Pickle Ball Day</div>
+                        <p class="event-date">Date: October 19, 2024</p>
+                        <p class="event-description">Join us for a lively day of pickleball, where fun meets purpose! Wear your pink gear and help raise awareness for breast cancer while enjoying this exciting sport with friends and community.</p>
+                        <p class="attend-instructions">To participate, please email <a href="mailto:bcagroup2023@gmail.com">bcagroup2023@gmail.com</a> with the event title as the subject.</p>
                     </div>
+                        
+                    
+
+                    <div id='calendar'></div>
                 </div>
+
+                
+                    
+                  
+                
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             </section>
 
 
@@ -742,52 +607,29 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito charity theme</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Maria</span>, Boss</small>
+                                                <h4 class="carousel-title">Together, we can raise awareness and support those fighting breast cancer. Every effort counts!</h4>
+                                                <small class="carousel-name"><span class="carousel-name-title">Liadny</span>, Founder</small>
                                            </div>
                                         </div>
 
                                         <div class="carousel-item">
                                             <div class="carousel-caption">
-                                                <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor mauris quis metus tempor orci</h4>
+                                                <h4 class="carousel-title">I volunteer because every voice matters in the fight against breast cancer.</h4>
 
-                                                <small class="carousel-name"><span class="carousel-name-title">Thomas</span>, Partner</small>
+                                                <small class="carousel-name"><span class="carousel-name-title">Reydel</span>, Web Developer</small>
                                             </div>
                                         </div>
 
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito charity theme</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Jane</span>, Advisor</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor mauris quis metus tempor orci</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Bob</span>, Entreprenuer</small>
-                                           </div>
-                                        </div>
 
                                           <ol class="carousel-indicators">
                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                                    <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                                    <img src="images/lia1.JPG" class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                </li>
 
                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                                    <img src="images/avatar/portrait-young-redhead-bearded-male.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                                    <img src="images/rey1.jpeg" class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                </li>
 
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                                    <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                                    <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
                                           </ol>
 
                                  </div>
@@ -808,11 +650,11 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <h2>Get in touch</h2>
 
                                 <div class="contact-image-wrap d-flex flex-wrap">
-                                    <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="img-fluid avatar-image" alt="">
+                                    <img src="images/lia1.JPG" class="img-fluid avatar-image" alt="">
 
                                     <div class="d-flex flex-column justify-content-center ms-3">
-                                        <p class="mb-0">Clara Barton</p>
-                                        <p class="mb-0"><strong>HR & Office Manager</strong></p>
+                                        <p class="mb-0">Liadny Aguilar</p>
+                                        <p class="mb-0"><strong>Founder</strong></p>
                                     </div>
                                 </div>
 
@@ -821,22 +663,22 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                     <p class="d-flex mb-2">
                                         <i class="bi-geo-alt me-2"></i>
-                                        Akershusstranda 20, 0150 Oslo, Norway
+                                        Miami FL
                                     </p>
 
                                     <p class="d-flex mb-2">
                                         <i class="bi-telephone me-2"></i>
 
                                         <a href="tel: 120-240-9600">
-                                            120-240-9600
+                                            813-357-4626
                                         </a>
                                     </p>
 
                                     <p class="d-flex">
                                         <i class="bi-envelope me-2"></i>
 
-                                        <a href="mailto:info@yourgmail.com">
-                                            donate@charity.org
+                                        <a href="mailto:bcagroup2023@gmail.com">
+                                            bcagroup2023@gmail.com
                                         </a>
                                     </p>
 
@@ -850,7 +692,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <h2>Contact form</h2>
 
                                 <p class="mb-4">Or, you can just send an email:
-                                    <a href="#">info@charity.org</a>
+                                    <a href="#">bcagroup2023@gmail.com</a>
                                 </p>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
@@ -886,15 +728,15 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <h5 class="site-footer-title mb-3">Quick Links</h5>
 
                         <ul class="footer-menu">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+                            <li class="footer-menu-item"><a href="#section_1" class="footer-menu-link">Our Story</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+                            <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">About Us</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+                            <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Donate</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+                            <li class="footer-menu-item"><a href="jobs.html" class="footer-menu-link">Volunteer Job</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                            <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Events</a></li>
                         </ul>
                     </div>
 
@@ -905,22 +747,23 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <i class="bi-telephone me-2"></i>
 
                             <a href="tel: 120-240-9600" class="site-footer-link">
-                                120-240-9600
+                                813-357-4626
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
                             <i class="bi-envelope me-2"></i>
 
-                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                                donate@charity.org
+                            <a href="mailto:bcagroup2023@gmail.com" class="site-footer-link">
+                                bcagroup2023@gmail.com
                             </a>
                         </p>
 
                         <p class="text-white d-flex mt-3">
                             <i class="bi-geo-alt me-2"></i>
-                            Akershusstranda 20, 0150 Oslo, Norway
+                            Miami FL
                         </p>
+                        
 
                         <a href="#" class="custom-btn btn mt-3">Get Direction</a>
                     </div>
@@ -930,33 +773,14 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="site-footer-bottom">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-6 col-md-7 col-12">
-                            <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Kind Heart</a> Charity Org.
-                        	Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-                        </div>
                         
                         <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                             <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
 
                                 <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                    <a href="https://www.instagram.com/thebcagroup/" class="social-icon-link bi-instagram"></a>
                                 </li>
 
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
-                                </li>
                             </ul>
                         </div>
                         
